@@ -57,6 +57,7 @@ standards.forEach(standard => {
         else{
           if(result.filter((item) => item.standard == standard).length === 0) {
             result.push({
+              key: `${standard}`,
               standard: standard,
               children: []
             })
@@ -65,6 +66,7 @@ standards.forEach(standard => {
           let standardObject = result.filter((item) => item.standard == standard)[0];
           if(standardObject.children.filter((item) => item.standard == category).length === 0) {
             standardObject.children.push({
+              key: `${standard}.${category}`,
               standard: category,
               children: []
             })
@@ -78,5 +80,5 @@ standards.forEach(standard => {
   })
 })
 
-fs.writeFileSync('result.json', JSON.stringify(result));
+fs.writeFileSync(`result-${treeStructure ? 'tree' : 'normal'}.json`, JSON.stringify(result));
 console.log(`Written ${result.length} results to result.json`);
