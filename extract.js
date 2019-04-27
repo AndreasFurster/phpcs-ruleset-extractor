@@ -80,5 +80,6 @@ standards.forEach(standard => {
   })
 })
 
-fs.writeFileSync(`result-${treeStructure ? 'tree' : 'normal'}.json`, JSON.stringify(result));
-console.log(`Written ${result.length} results to result.json`);
+let filename = `rulesets-${treeStructure ? 'tree' : 'normal'}.json`;
+fs.writeFileSync(filename, JSON.stringify(result));
+console.log(`Written ${result.length} results to ${filename}.json`);

@@ -13,8 +13,8 @@ $ node extract.js tree
 ```
 
 ## Results
-- [Normal list](https://github.com/AndreasFurster/phpcs-ruleset-extractor/blob/master/result-normal.json)
-- [Tree structure](https://github.com/AndreasFurster/phpcs-ruleset-extractor/blob/master/result-tree.json)
+- [Normal list](https://github.com/AndreasFurster/phpcs-ruleset-extractor/blob/master/rulesets-normal.json)
+- [Tree structure](https://github.com/AndreasFurster/phpcs-ruleset-extractor/blob/master/rulesets-tree.json)
 
 ## Used by
 https://github.com/AndreasFurster/phpcs-ruleset-builder
